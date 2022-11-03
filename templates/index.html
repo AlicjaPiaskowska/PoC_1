@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">MPK Wrocław</h1>
+        </header>
+    </div>
+<select name= city method="get" action="/">
+    {% for cities in city %}
+    <option value= "{{cities}}" SELECTED>{{cities}}</option>"
+    {% endfor %}
+</select>
+<p>
+    <button onclick>Submit</button>
+
+    <script src="json_test.js"></script>
+</p>
+
+</body>
+</html>
