@@ -12,11 +12,11 @@
     <option value= "{{cities}}" SELECTED>{{cities}}</option>"
     {% endfor %}
 </select>
-<p>
-    <button onclick>Submit</button>
 
-    <script src="json_test.js"></script>
-</p>
-
+<form method="post" action="/json">
+    <legend>Choose a city and click "Submit"</legend>
+    <input type='submit' value='Submit'>
+    <p>{{objects_list}}</p>
+</form>
 </body>
 </html>
