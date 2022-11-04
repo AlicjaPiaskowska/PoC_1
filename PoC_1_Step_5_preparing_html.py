@@ -36,8 +36,7 @@ for row in rows:
     d["route_desc"] = row[2]
     objects_list.append(d)
 
-#routes_data_json = json.dumps(objects_list, indent = 4)
-
+routes_data_json = json.dumps(objects_list, indent = 4)
 
     # with open("json_test.js", "w") as f:
     #     f.write(routes_data_json)
@@ -50,13 +49,9 @@ def dropdown():
     return render_template('index.html', city=cities)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/json', methods=['POST'])
 def json_data():
-    objects_list=objects_list
-    return render_template("index.html", objects_list=objects_list)
-
-
-
+    return render_template("index.html", objects_list=json.dumps(objects_list))
 
 if __name__ == "__main__":
     app.run(debug = True)
